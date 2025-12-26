@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Style -->
+  <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <title>Add Post</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="btn border-style h-50 w-50">
+      <a href="./index.html" class="h-50">
+        <img src="./Assets/img/main.png">
+      </a>
+    </div>
+
+    <form action="" id="createPost" class="formStyle flex-between center-position border-style">
+      <label for="postTitle">Add Your Post Title</label>
+      <input type="text" name="postTitle" id="postTitle" placeholder="Post Title" required>
+      <label for="postContent">Add Your Post Content</label>
+      <textarea name="postContent" id="postContent" placeholder="Post Content" required></textarea>
+      <label for="userId">Add User ID</label>
+      <input type="text" name="userId" id="userId" placeholder="User Id" required>
+      <input type="submit" value="Post" class="btn border-style" id="create">
+    </form>
+  </div>
+  <script src="./Assets/JS/fetchData.js"></script>
+  <script src="./Assets/JS/add-post.js"></script>
+</body>
+
+</html>

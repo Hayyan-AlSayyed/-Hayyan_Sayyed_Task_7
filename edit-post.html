@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Style -->
+  <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <title>Edit Post</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="btn border-style w-50 h-50 flex-center">
+      <a href="./index.html" class="h-50">
+        <img src="./Assets/img/main.png">
+      </a>
+
+    </div>
+    <form action="" id="createPost" class="formStyle flex-between center-position border-style">
+      <label for="postTitle">Post Title</label>
+      <input type="text" name="postTitle" id="postTitle" placeholder="Post Title" required>
+      <label for="postContent">Post Content</label>
+      <textarea name="postContent" id="postContent" placeholder="Post Content" required></textarea>
+      <input type="submit" value="Update" class="btn border-style">
+    </form>
+
+  </div>
+  <script src="./Assets/JS/fetchData.js"></script>
+  <script src="./Assets/JS/edit-post.js"></script>
+</body>
+
+</html>

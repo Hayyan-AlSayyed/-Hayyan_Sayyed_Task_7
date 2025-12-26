@@ -1,0 +1,434 @@
+/* *************** Reset & Base Styles *************** */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Roboto Slab", serif;
+  background-color: #E1E9EE;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* *************** End Reset & Base Styles *************** */
+
+
+/* *************** Start CSS *************** */
+.main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+}
+
+.add-btn {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+
+.add {
+  width: 140px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.add:hover {
+  transform: translateY(-2px);
+}
+
+.btn {
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 3px 20px;
+
+  &:hover {
+    transform: translateY(-2px);
+
+  }
+}
+
+
+.add p {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.add img {
+  width: 20px;
+  height: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 30%;
+  min-width: 300px;
+  background-color: #F2F5F7;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    scale: 1.05;
+
+    background-color: #4e7590;
+
+  }
+}
+
+
+/* ****************** */
+.loading {
+  color: #6B778D;
+  /* background-image: url(./../img/Loading.png);
+  background-repeat: no-repeat;
+  background-position: 38% 50%; */
+  width: 99vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+/* ****************** */
+.border-style {
+  border: 4px solid transparent;
+  background-image: linear-gradient(#F2F5F7, #F2F5F7),
+    linear-gradient(to right, #f05053, #6358e1);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 10px;
+}
+
+.post-title {
+  color: #333C4E;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  color: #6B778D;
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.show-more {
+  color: #6358e1;
+  font-weight: 700;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.special {
+  font-weight: 700;
+  display: block;
+  text-transform: capitalize;
+  color: #6358e1;
+}
+
+
+#delete {
+  display: flex;
+  width: 125px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+
+}
+
+#edit {
+  display: flex;
+  width: 125px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.details {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-top: 3px solid transparent;
+  background-image: linear-gradient(#F2F5F7, #F2F5F7),
+    linear-gradient(to right, #f05053, #6358e1);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.likes,
+.user-name {
+  background-color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+
+
+
+.w-50 {
+  width: 75px;
+}
+
+.h-50 {
+  height: 40px;
+}
+
+
+
+.likes img,
+.user-name img {
+  width: 16px;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 728px;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #333C4E;
+  border-left: 2px solid #6358e1;
+  align-self: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tag {
+
+  border-bottom: 2px solid #6358e1;
+}
+
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px;
+  gap: 10px;
+
+  .comment {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #333C4E;
+    border-left: 4px solid #6358e1;
+
+  }
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+/* ************************Add Post************************** */
+.formStyle {
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  width: 500px;
+}
+
+.center-position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="text"],
+textarea {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #6358e18a;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 300px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #f05053;
+}
+
+textarea {
+  height: 120px;
+}
+
+
+
+
+
+/* *************** Utilities & Layout *************** */
+
+/* Flexbox & Grid */
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Spacing */
+.m-20 {
+  margin: 20px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.d-block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* *************** Media Queries (Responsive System) *************** */
+
+/* Extra Large Screens - Desktop */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Laptops / Tablets Landscape */
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Tablets Portrait */
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+  .container {
+    width: 95%;
+  }
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-time {
+  width: 100px;
+  animation: spin 2s ease-in-out infinite;
+}
